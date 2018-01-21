@@ -1,5 +1,3 @@
-import os
-import requests
 import csv
 import os
 from apiclient import discovery
@@ -29,6 +27,7 @@ def download_csv_from_google_drive_spreadsheets():
             with open(fn, 'wb') as f:
                 f.write(data)
             print('DONE')
+        f.close()
         else:
             print('ERROR (could not download file)')
     else:
